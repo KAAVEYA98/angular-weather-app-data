@@ -8,14 +8,11 @@ import { WEATHER_ITEMS } from './init-weather';
 @Component({
   selector: 'app-sidebar',
   template: `
-  <h3>Saved Profiles</h3>
-    <button (click) = "onSaveNew()">Save list to Profile</button>
     <article class="profile" *ngFor="let profile of profiles">
     <div  (click) = "onLoadProfile(profile)">
-        <h4>{{profile.profileName}}</h4>
+        <h4>Top Cities</h4>
         <p>{{profile.cities.join(', ')}} </p>
     </div>
-      <span class="delete" (click)="onDeleteProfile($event,profile)">X</span>
     </article>
   `,
   styleUrls: ['../assets/css/sidebar.css'],
