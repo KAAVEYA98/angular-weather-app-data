@@ -11,7 +11,7 @@ export class ProfileService {
 
   constructor() {
     this.profiles = [
-      new Profile('Default Profile', ['London', 'New York', 'Berlin'])
+      new Profile('Default Profile', ['Chennai', 'Bangalore', 'Delhi'])
     ]
   }
 
