@@ -16,11 +16,11 @@ import { Subject } from 'rxjs/Subject';
           <button type="submit" (click)="onSubmit(e, locationGroup)" >Add City</button>
           <button type="button" (click)="clearWeatherData()">Clear</button>
       </form>
-    <p>Form value: {{ locationGroup.value | json }}</p>
-    <p>Form status: {{ locationGroup.status | json }}</p>
+  <br>
       <div>
         <span class="info">City found: </span> {{data.name}}
       </div>
+      <hr/>
     </section>
   `,
   styleUrls: ['../../assets/css/weather-search.css'],

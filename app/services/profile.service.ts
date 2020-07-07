@@ -15,8 +15,6 @@ export class ProfileService {
     ]
   }
 
-
-
   public getProfiles() {
     return this.profiles;
   }

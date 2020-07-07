@@ -4,17 +4,17 @@ export class Init {
       console.log('Weather items not found!!!');
       const weatherItems = [
         {
-          Cityname: 'London',
+          Cityname: 'Chennai',
           description: 'RAINY',
           temperature: 32
         },
         {
-          Cityname: 'Mexico City',
+          Cityname: 'Bangalore',
           description: 'CLOUDY',
           temperature: 30
         },
         {
-          Cityname: 'New York',
+          Cityname: 'Delhi',
           description: 'SUNNY',
           temperature: 28
         }
