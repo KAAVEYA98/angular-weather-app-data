@@ -15,18 +15,12 @@ export class ProfileService {
     ]
   }
 
-  saveNewProfile(cities: string[]) {
-      const profileName = `Profile ${this.profiles.length}`;
-      const newProfile = new Profile(profileName, cities);
-      this.profiles.push(newProfile);
-  }
+
 
   public getProfiles() {
     return this.profiles;
   }
 
-  public deleteProfile(profile: Profile){ 
-     this.profiles.splice(this.profiles.indexOf(profile),1);
-  }
+
   
 }
