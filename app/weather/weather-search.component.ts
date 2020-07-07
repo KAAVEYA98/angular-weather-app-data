@@ -13,7 +13,7 @@ import { Subject } from 'rxjs/Subject';
       <form [formGroup]="locationGroup" novalidate>
           <label for="city">City</label>
           <input #location formControlName="location" type="text" id="city" name="city" (input)="onSearchLocation($event, location.value)" [required]="true" />
-          <button type="submit" (click)="onSubmit(e, locationGroup)" >Add City</button>
+          <button type="submit" (click)="onSubmit(e, locationGroup)" >Search City</button>
           <button type="button" (click)="clearWeatherData()">Clear</button>
       </form>
   <br>
@@ -42,6 +42,7 @@ export class WeatherSearchComponent implements OnInit {
     this.weatherItemsService$.searchWeatherData(form.value.location).subscribe(
       data => {
         const weatherItem = new WeatherItem(data.name, data.weather[0].description, data.main.temp);
+        this.weatherItemsService$.clearWeatherItems();
         this.weatherItemsService$.addItem(weatherItem);
       }
     );
